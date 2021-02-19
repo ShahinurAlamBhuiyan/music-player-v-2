@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+
+/* ...preloader... */
+.loader_bg {
+    position: fixed;
+    z-index: 999999;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    border: 0 solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    top: calc(49vh - 7.5rem);
+    left: calc(49vw - 7.5rem);
+    color: #000;
+}
+
+.loader:before,.loader:after {
+    content: "";
+    border: 1em solid;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    animation: loader 2s linear infinite;
+    opacity: 0;
+}
+
+.loader:before {
+    animation-delay: 0.5s;
+}
+
+@keyframes loader {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+    /*............. ...... */
+   
+html{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+.main_div{
+    height: 100vh;
+    width: 100vw;
+    background-color: #f6f6f6;
+    display: grid;
+    place-items: center;
+}
+.music_container{
+    width: 35rem;
+    height: 55rem;
+    background-color: #ffffff;
+    border-radius: 2rem;
+    box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    text-align: center;
+}
+.music_container #title{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.5rem;
+    color: #171717;
+    margin: 2rem 0 0.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-shadow: 0 0.5rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+.music_container #artist{
+    color: #cccacc;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    font-weight: 300;
+}
+.img_container img{
+    width: 25rem;
+    height: 25rem;
+    margin: auto;
+}
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    /* box-shadow: 0 1.2rem 0.3rem 0.5rem rgba(0, 0, 0, 0.1); */
+}
+.music_controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+    margin: auto;
+    margin-top: 1rem;
+}
+.music_controls .fas{
+    color: #111111;
+    font-size: 2rem;
+    cursor: pointer;
+    filter: drop-shadow(0rem 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4));
+}
+.music_controls .fas:hover{
+    color: gray;
+    box-shadow: 0 1rem 2rem 0.2rem rgba(0, 0, 0, 0.4);
+}
+.music_controls .main_btn:hover{
+    background-color: rgb(212, 201, 201);
+    color: #111;
+}
+.music_controls .main_btn{
+    width: 5rem;
+    height: 5rem;
+    background-color: #111;
+    color: #f6f6f6;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.anime{
+    animation: rotatePlayer 3s linear infinite;
+}
+@keyframes rotatePlayer{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* progress bar */
+
+.progress_bar_container{
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.progress_div{
+    width: 100%;
+    height: 0.5rem;
+    box-shadow: 0 1rem 2rem 0.2rem rgba(0, 0, 0, 0.4);
+
+    border-radius: 4rem;
+    margin-top: 0.5rem;
+    position: relative;
+    transition: width 1s linear;
+    -moz-transition: width 1s linear;
+    -webkit-transition: width 1s linear;
+    -o-transition: width 1s linear;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+.progress{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #000;
+
+    border-radius: 4rem;
+    transition: width 1s linear;
+    -moz-transition: width 1s linear;
+    -o-transition: width 1s linear;
+    -webkit-transition: width 1s linear;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+.progress_duration_meter{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+#footer {
+    color: rgb(0, 0, 0);
+    font-size: 1.4rem;
+}
+#footer a{
+    text-decoration: none;
+}

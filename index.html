@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music-Player</title>
+    <!-- favicon link -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--preloader-->
+    <div class="loader_bg">
+        <div class="loader"></div>
+    </div>
+    <div class="main_div">
+        <div class="main_container">
+            <div class="music_container">
+                <h2 id="title">aniket prantor</h2>
+                <h3 id="artist">by artcell</h3>
+                <div class="img_container">
+                    <img src="images/song-1.jpg">
+                </div>
+                <audio id="vid" src="musics/song-1.mp3"></audio>
+
+                <!-- progress bar -->
+                <div class="progress_bar_container" id="progress_container">
+                    <div class="progress_duration_meter">
+                        <div id="current_time">0.00</div>
+                        <div id="duration">16.15</div>
+                    </div>
+                    <div class="progress_div" id="progress_div">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                </div>
+                <!-- controls -->
+                <div class="music_controls">
+                    <i class="fas fa-backward" id="prev" title="previous"></i>
+                    <i class="fas fa-play main_btn" id="play" title="play"></i>
+                    <i class="fas fa-forward" id="next" title="next"></i>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            &copy; All rights reserved by <a href="https://www.facebook.com/shahin19sep/" target="_blank">Shahin Bhuiyan</a>  2021, BD.
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
